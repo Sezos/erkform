@@ -5766,7 +5766,7 @@ img {
   .sidebar-collapse
     .navbar.bg-white:not(.navbar-transparent)
     .navbar-toggler-bar {
-    background: #888;
+    background: black;
   }
   .sidebar-collapse .top-bar {
     transform: rotate(0);

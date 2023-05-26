@@ -6609,7 +6609,7 @@ img {
   .bootstrap-collapse
     .navbar.bg-white:not(.navbar-transparent)
     .navbar-toggler-bar {
-    background: #888888;
+    background: black;
   }
   .bootstrap-collapse .top-bar {
     transform: rotate(0);

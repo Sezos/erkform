@@ -55,6 +55,9 @@ function IndexNavbar() {
                 className={"fixed-top " + navbarColor}
                 expand="lg"
                 color="light"
+                // style={{
+                //     background: "rgb(255,140,0, 0.7)",
+                // }}
             >
                 <Container>
                     <div className="navbar-translate">
@@ -86,9 +89,18 @@ function IndexNavbar() {
                             aria-expanded={collapseOpen}
                             type="button"
                         >
-                            <span className="navbar-toggler-bar top-bar"></span>
-                            <span className="navbar-toggler-bar middle-bar"></span>
-                            <span className="navbar-toggler-bar bottom-bar"></span>
+                            <span
+                                className="navbar-toggler-bar top-bar"
+                                style={{ backgroundColor: "black" }}
+                            ></span>
+                            <span
+                                className="navbar-toggler-bar middle-bar"
+                                style={{ backgroundColor: "black" }}
+                            ></span>
+                            <span
+                                className="navbar-toggler-bar bottom-bar"
+                                style={{ backgroundColor: "black" }}
+                            ></span>
                         </button>
                     </div>
                     <Collapse
@@ -119,7 +131,7 @@ function IndexNavbar() {
                                     onClick={(e) => {
                                         e.preventDefault();
                                         document
-                                            .getElementById("project-section")
+                                            .getElementById("projects-section")
                                             .scrollIntoView();
                                     }}
                                 >

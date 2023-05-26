@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 // reactstrap components
 import {
@@ -10,6 +12,9 @@ import {
     Container,
     Row,
     Col,
+    Card,
+    CardHeader,
+    CardBody,
 } from "reactstrap";
 
 // core components
@@ -19,6 +24,7 @@ import {
 import ProjectSection from "components/ErkForm/Projects";
 import Partners from "components/ErkForm/Partners";
 import WhatWeDo from "components/ErkForm/Whatwedo";
+import WhoWeAre from "components/ErkForm/Whoweare";
 
 function ErkFormPage() {
     const [firstFocus, setFirstFocus] = React.useState(false);
@@ -44,25 +50,11 @@ function ErkFormPage() {
                     // style={{ background: "#333333" }}
                 >
                     <Container>
-                        <Row>
-                            <Col className="ml-auto mr-auto text-center" md="8">
-                                <h2 className="title">Who we are?</h2>
-                                <h5 className="description">
-                                    Erk Form is a team of professionals who have
-                                    been performing fast, efficient, and
-                                    high-quality metal work for major projects
-                                    such as roads, bridges, tunnels, railways,
-                                    and residential projects since 2020. We will
-                                    carry out any project according to your
-                                    wishes in a professional manner, quickly and
-                                    safely.
-                                </h5>
-                            </Col>
-                        </Row>
-                        <div className="separator separator-primary"></div>
+                        <WhoWeAre />
+                        {/* <div className="separator separator-primary"></div> */}
                         <WhatWeDo />
                         <ProjectSection />
-                        <Partners />
+                        {/* <Partners /> */}
                         {/* <div className="section-story-overview">
                             <Row>
                                 <Col md="6">
@@ -340,9 +332,8 @@ function ErkFormPage() {
                                     style={{
                                         border: 0,
                                         borderRadius: "5%",
-                                        filter: "invert(90%)",
                                     }}
-                                    allowFullScreen="true"
+                                    allowFullScreen={true}
                                     loading="lazy"
                                     title="Mondaa Steel Fixing"
                                     referrerpolicy="no-referrer-when-downgrade"
@@ -413,6 +404,126 @@ function ErkFormPage() {
                                     </div>
                                 </Col>
                             </Col>
+                        </Row>
+                    </Container>
+                </div>
+                <div>
+                    <Container>
+                        <Row>
+                            <Col md="2"></Col>
+                            <Col md="4" sm="10">
+                                <Card
+                                    className="p-5"
+                                    style={{ borderRadius: "20px" }}
+                                >
+                                    <CardHeader className="h3 title">
+                                        <FontAwesomeIcon
+                                            icon={icon({
+                                                name: "user-tie",
+                                                family: "classic",
+                                                style: "solid",
+                                            })}
+                                            width={"2rem"}
+                                        />
+                                        Bobby
+                                    </CardHeader>
+                                    <CardBody
+                                        style={{
+                                            display: "block",
+                                            marginLeft: "auto",
+                                            marginRight: "auto",
+                                        }}
+                                    >
+                                        <Row>
+                                            <a
+                                                className="h4"
+                                                href="mailto: bobby@erkform.com.au"
+                                            >
+                                                {/* <i
+                                                    style={{
+                                                        color: "black",
+                                                        marginRight: "5px",
+                                                    }}
+                                                    className="fab fa-facebook-square"
+                                                ></i> */}
+                                                bobby@erkform.com.au
+                                            </a>
+                                        </Row>
+                                        <Row>
+                                            <a
+                                                className="h4"
+                                                href="tel:+61451460616"
+                                            >
+                                                <i
+                                                    style={{
+                                                        color: "black",
+                                                        marginRight: "5px",
+                                                    }}
+                                                    className="fa fa-phone"
+                                                ></i>
+                                                +61 468 991 515
+                                            </a>
+                                        </Row>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                            <Col md="4" sm="10">
+                                <Card
+                                    className="p-5"
+                                    style={{ borderRadius: "20px" }}
+                                >
+                                    <CardHeader className="h3 title">
+                                        <FontAwesomeIcon
+                                            icon={icon({
+                                                name: "user-tie",
+                                                family: "classic",
+                                                style: "solid",
+                                            })}
+                                            width={"2rem"}
+                                        />
+                                        Ebi
+                                    </CardHeader>
+                                    <CardBody
+                                        style={{
+                                            display: "block",
+                                            marginLeft: "auto",
+                                            marginRight: "auto",
+                                        }}
+                                    >
+                                        <Row>
+                                            <a
+                                                className="h4"
+                                                href="mailto: ebi@erkform.com.au"
+                                            >
+                                                {/* <i
+                                                    style={{
+                                                        color: "black",
+                                                        marginRight: "5px",
+                                                    }}
+                                                    className="fab fa-facebook-square"
+                                                ></i> */}
+                                                ebi@erkform.com.au
+                                            </a>
+                                        </Row>
+                                        <Row>
+                                            <a
+                                                className="h4"
+                                                href="tel:+61451460616"
+                                            >
+                                                <i
+                                                    style={{
+                                                        color: "black",
+                                                        marginRight: "5px",
+                                                    }}
+                                                    className="fa fa-phone"
+                                                ></i>{" "}
+                                                +61 451 460 616
+                                            </a>
+                                        </Row>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                            <Col md="2"></Col>
                         </Row>
                     </Container>
                 </div>
